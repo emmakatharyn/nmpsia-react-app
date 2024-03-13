@@ -1,0 +1,12 @@
+.header {
+  width: 100%;
+  background-color: pink;
+}
+
+.navItem {
+  list-style-type: none;
+}
+
+.bbPhat {
+  padding: 4px;
+}
