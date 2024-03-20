@@ -1,6 +1,5 @@
-.header {
-  width: 100%;
-  background-color: pink;
+.navBar {
+  padding-top: 0;
 }
 
 .navItem {
@@ -8,5 +7,6 @@
 }
 
 .bbPhat {
+  height: auto;
   padding: 4px;
 }

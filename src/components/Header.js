@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+// import Image from "react-bootstrap/Image";
 
 function Header() {
   return (
@@ -12,16 +13,29 @@ function Header() {
         data-bs-theme='dark'
         bg='primary'
         expand='lg'
-        className='flex-column'
+        className={`${styles.navBar} flex-column pb-0 fixed`}
       >
         {/* upper row */}
         <Container className={styles.bbPhat} fluid>
-          <Navbar.Brand href='#home' className='ps-2'>
-            NMPSIA - React
+          <Navbar.Brand
+            href='#home'
+            style={{
+              backgroundColor: "#fff",
+              padding: "4px",
+              borderRadius: "3px",
+            }}
+          >
+            <img
+              src='https://nmpsia.com/images/logo_2022.jpg'
+              width='auto'
+              height='60px'
+              className='d-inline-block align-top'
+              alt='React Bootstrap logo'
+            />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls='navbar-dark-example' />
           <Navbar.Collapse id='navbar-dark-example'>
-            <Nav className='ms-auto'>
+            <Nav className={`${styles.navLinkList} ms-auto`}>
               <Nav.Link href='#link'>About</Nav.Link>
               <Nav.Link href='#link'>Contact</Nav.Link>
               <Nav.Link href='#link'>Board Login</Nav.Link>
@@ -49,11 +63,7 @@ function Header() {
                   NMPSIA - Wellness
                 </NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown
-                className={styles.blueBackground}
-                id='nav-dropdown-dark-example'
-                title='EMPLOYERS'
-              >
+              <NavDropdown id='nav-dropdown-dark-example' title='EMPLOYERS'>
                 <NavDropdown.Item href='#action/3.1'>
                   NMPSIA - Benefit Enrollment & Forms
                 </NavDropdown.Item>
@@ -77,11 +87,7 @@ function Header() {
                   COVID-19 Information
                 </NavDropdown.Item>
               </NavDropdown>
-              <NavDropdown
-                className={styles.blueBackground}
-                id='nav-dropdown-dark-example'
-                title='EMPLOYEES'
-              >
+              <NavDropdown id='nav-dropdown-dark-example' title='EMPLOYEES'>
                 <NavDropdown.Item href='#action/3.1'>
                   NMPSIA - Benefit Enrollment & Forms
                 </NavDropdown.Item>
@@ -102,25 +108,15 @@ function Header() {
                   COVID-19 Information
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href='#link' className={styles.navLink}>
-                User Login
-              </Nav.Link>
+              <Nav.Link href='#link'>User Login</Nav.Link>
             </Nav>
 
             {/* bottom right */}
             <Nav className='ms-auto'>
-              <Nav.Link href='#link' className={styles.navLink}>
-                Risk Division
-              </Nav.Link>
-              <Nav.Link href='#link' className={styles.navLink}>
-                Behavioral Health
-              </Nav.Link>
-              <Nav.Link href='#link' className={styles.navLink}>
-                NMPSIA Procurements
-              </Nav.Link>
-              <Nav.Link href='#link' className={styles.navLink}>
-                IPRA Request
-              </Nav.Link>
+              <Nav.Link href='#link'>Risk Division</Nav.Link>
+              <Nav.Link href='#link'>Behavioral Health</Nav.Link>
+              <Nav.Link href='#link'>NMPSIA Procurements</Nav.Link>
+              <Nav.Link href='#link'>IPRA Request</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
