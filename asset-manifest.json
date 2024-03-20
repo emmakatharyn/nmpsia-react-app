@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/nmpsia-react-app/static/css/main.c56304cc.css",
+    "main.js": "/nmpsia-react-app/static/js/main.9481ef7a.js",
+    "static/media/nicole-geri-zhEk0x9OOhw-unsplash.jpg": "/nmpsia-react-app/static/media/nicole-geri-zhEk0x9OOhw-unsplash.ba6908c2f93110b95550.jpg",
+    "index.html": "/nmpsia-react-app/index.html",
+    "main.c56304cc.css.map": "/nmpsia-react-app/static/css/main.c56304cc.css.map",
+    "main.9481ef7a.js.map": "/nmpsia-react-app/static/js/main.9481ef7a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c56304cc.css",
+    "static/js/main.9481ef7a.js"
+  ]
+}
