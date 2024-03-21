@@ -33,6 +33,7 @@ function Hero() {
               href='https://www.stopitsolutions.com/nmpsia'
               target='_blank'
               className='btn btn-primary'
+              rel='noreferrer'
             >
               STOPit Anonymous Reporting System
             </a>
