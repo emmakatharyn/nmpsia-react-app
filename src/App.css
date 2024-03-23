@@ -90,9 +90,9 @@ body {
   padding-top: 120px;
 }
 
-.happening-now {
+.happening {
   height: 840px;
-  padding: 60px;
+  background-color: #abc4eca8;
 }
 
 .hero-btn-container {
@@ -107,6 +107,39 @@ body {
 
 .hero .hero-btn-container .btn-primary:hover {
   background-color: #2d66c0;
+}
+
+.sectionTitle {
+  text-align: center;
+  /* margin-left: 72px; */
+  padding-top: 72px;
+  color: #244e92;
+}
+
+.mySwiper {
+  margin: 80px 12px;
+}
+
+.swiper-wrapper {
+  gap: 12px;
+  margin: 12px;
+
+  width: 90%;
+}
+
+.swiper-slide {
+  /* max-width: 30%; */
+  background-color: #f3f3f3;
+  padding: 12px;
+  max-width: 340px;
+  min-height: 320px;
+  position: relative;
+  border-radius: 3px;
+}
+
+.happBtns {
+  max-width: 88%;
+  margin: 0 auto;
 }
 
 @media (max-width: 991px) {
