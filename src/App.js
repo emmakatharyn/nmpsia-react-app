@@ -4,12 +4,14 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 // import HappeningNow from "./components/HappeningNow/HappeningNow";
 import Footer from "./components/Footer/Footer";
+import About from "./pages/About";
 
 function App() {
   return (
     <>
       <Header />
-      <Hero />
+      <About />
+      {/* <Hero /> */}
       {/* <HappeningNow /> */}
       <Footer />
     </>
