@@ -1,8 +1,10 @@
+import { Link } from "react-router-dom";
+
 function Hero() {
   return (
     <>
       <div className='promo-banner'>
-        <a href='NMPSIAMobile.html'>Get the NMPSIA Mobile App! 📱</a>
+        <Link to='/mobile-app'>Get the NMPSIA Mobile App! 📱</Link>
       </div>
 
       <section className='hero'>
@@ -11,32 +13,27 @@ function Hero() {
             Welcome to the New Mexico Public Schools Insurance Authority
           </h1>
           <div className='hero-btn-container container d-flex flex-wrap'>
-            <a href='#happening' className='btn btn-primary'>
+            <Link to='/news' className='btn btn-primary'>
               Happening Now
-            </a>
-            <a href='programGuide.html' className='btn btn-primary'>
+            </Link>
+            <Link to='/program-guide' className='btn btn-primary'>
               2023 Program Guide
-            </a>
-            <a href='comparisonChart.html' className='btn btn-primary'>
+            </Link>
+            <Link to='/plan-comparison' className='btn btn-primary'>
               Compare Medical Plans
-            </a>
+            </Link>
 
-            <a
-              href='modal'
-              data-bs-toggle='modal'
-              data-bs-target='#employeeNotifications'
-              className='btn btn-primary'
-            >
+            <Link to='/employee-notifications' className='btn btn-primary'>
               📢 2024 Annual Employee Notifications
-            </a>
-            <a
-              href='https://www.stopitsolutions.com/nmpsia'
+            </Link>
+            <Link
+              to='https://www.stopitsolutions.com/nmpsia'
               target='_blank'
               className='btn btn-primary'
               rel='noreferrer'
             >
               STOPit Anonymous Reporting System
-            </a>
+            </Link>
           </div>
         </div>
       </section>

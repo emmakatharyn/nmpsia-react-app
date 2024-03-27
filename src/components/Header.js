@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
 // import Image from "react-bootstrap/Image";
 
 function Header() {
@@ -18,7 +19,8 @@ function Header() {
         {/* upper row */}
         <Container className={styles.bbPhat} fluid>
           <Navbar.Brand
-            href='#home'
+            as={Link}
+            to='/'
             style={{
               backgroundColor: "#fff",
               padding: "4px",
@@ -36,10 +38,18 @@ function Header() {
           <Navbar.Toggle aria-controls='navbar-dark-example' />
           <Navbar.Collapse id='navbar-dark-example'>
             <Nav className={`${styles.navLinkList} ms-auto`}>
-              <Nav.Link href='#link'>About</Nav.Link>
-              <Nav.Link href='#link'>Contact</Nav.Link>
-              <Nav.Link href='#link'>Board Login</Nav.Link>
-              <Nav.Link href='#search'>Search</Nav.Link>
+              <Nav.Link as={Link} to='/about'>
+                About
+              </Nav.Link>
+              <Nav.Link as={Link} to='/contact'>
+                Contact
+              </Nav.Link>
+              <Nav.Link as={Link} to='/board-login'>
+                Board Login
+              </Nav.Link>
+              <Nav.Link as={Link} to='/search'>
+                Search
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -49,74 +59,88 @@ function Header() {
             {/* bottom left */}
             <Nav className='me-auto'>
               <NavDropdown id='collapsible-nav-dropdown' title='NMPSIA'>
-                <NavDropdown.Item href='#action/3.1'>
+                <NavDropdown.Item as={Link} to='/the-authority'>
                   NMPSIA - The Authority
                 </NavDropdown.Item>
-                <NavDropdown.Item href='#action/3.2'>
+                <NavDropdown.Item as={Link} to='/benefits-division'>
                   NMPSIA - Benefits Division
                 </NavDropdown.Item>
-                <NavDropdown.Item href='#action/3.3'>
+                <NavDropdown.Item as={Link} to='/risk-division'>
                   NMPSIA - Risk Division
                 </NavDropdown.Item>
                 {/* <NavDropdown.Divider /> */}
-                <NavDropdown.Item href='#action/3.4'>
+                <NavDropdown.Item as={Link} to='/wellness-programs'>
                   NMPSIA - Wellness
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown id='nav-dropdown-dark-example' title='EMPLOYERS'>
-                <NavDropdown.Item href='#action/3.1'>
+                <NavDropdown.Item as={Link} to='/employers/enrollment'>
                   NMPSIA - Benefit Enrollment & Forms
                 </NavDropdown.Item>
-                <NavDropdown.Item href='#action/3.2'>
+                <NavDropdown.Item as={Link} to='/employers/carriers-info'>
                   NMPSIA - Carrier Benefits Information
                 </NavDropdown.Item>
-                <NavDropdown.Item href='#action/3.3'>
+                <NavDropdown.Item as={Link} to='/wellness-programs'>
                   NMPSIA - Wellness
                 </NavDropdown.Item>
                 {/* <NavDropdown.Divider /> */}
-                <NavDropdown.Item href='#action/3.4'>
+                <NavDropdown.Item as={Link} to='/employers/premiums'>
                   NMPSIA - Benefit Premiums
                 </NavDropdown.Item>
-                <NavDropdown.Item href='#action/3.4'>
+                <NavDropdown.Item as={Link} to='/program-info'>
                   NMPSIA - Vital Program Info
                 </NavDropdown.Item>
-                <NavDropdown.Item href='#action/3.4'>
+                <NavDropdown.Item as={Link} to='/training'>
                   NMPSIA - Training Tutorials & Videos
                 </NavDropdown.Item>
-                <NavDropdown.Item href='#action/3.4'>
+                <NavDropdown.Item as={Link} to='/covid-19'>
                   COVID-19 Information
                 </NavDropdown.Item>
               </NavDropdown>
               <NavDropdown id='nav-dropdown-dark-example' title='EMPLOYEES'>
-                <NavDropdown.Item href='#action/3.1'>
+                <NavDropdown.Item as={Link} to='/employees/enrollment'>
                   NMPSIA - Benefit Enrollment & Forms
                 </NavDropdown.Item>
-                <NavDropdown.Item href='#action/3.2'>
+                <NavDropdown.Item as={Link} to='/employees/carriers-info'>
                   NMPSIA - Carrier Benefits Information
                 </NavDropdown.Item>
-                <NavDropdown.Item href='#action/3.3'>
+                <NavDropdown.Item as={Link} to='/wellness-programs'>
                   NMPSIA - Wellness
                 </NavDropdown.Item>
-                <NavDropdown.Item href='#action/3.4'>
+                <NavDropdown.Item as={Link} to='/employees/premiums'>
                   NMPSIA - Benefit Premiums
                 </NavDropdown.Item>
-                <NavDropdown.Item href='#action/3.4'>
+                <NavDropdown.Item as={Link} to='/plan-comparison'>
                   NMPSIA - Medical Plan Comparison Chart
                 </NavDropdown.Item>
 
-                <NavDropdown.Item href='#action/3.4'>
+                <NavDropdown.Item as={Link} to='/covid-19'>
                   COVID-19 Information
                 </NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href='#link'>User Login</Nav.Link>
+              <Nav.Link
+                as={Link}
+                to='https://nmpsiaonline.nmpsia.com/'
+                target='_blank'
+              >
+                User Login
+              </Nav.Link>
             </Nav>
 
             {/* bottom right */}
             <Nav className='ms-auto'>
-              <Nav.Link href='#link'>Risk Division</Nav.Link>
-              <Nav.Link href='#link'>Behavioral Health</Nav.Link>
-              <Nav.Link href='#link'>NMPSIA Procurements</Nav.Link>
-              <Nav.Link href='#link'>IPRA Request</Nav.Link>
+              <Nav.Link as={Link} to='/risk-division'>
+                Risk Division
+              </Nav.Link>
+              <Nav.Link as={Link} to='/behavioral-health'>
+                Behavioral Health
+              </Nav.Link>
+              <Nav.Link as={Link} to='/procurements'>
+                NMPSIA Procurements
+              </Nav.Link>
+              <Nav.Link as={Link} to='/IPRA'>
+                IPRA Request
+              </Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
